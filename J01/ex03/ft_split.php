@@ -1,4 +1,3 @@
-#!/usr/bin/php
 <?php
     function ft_split($array)
     {
@@ -7,4 +6,5 @@
         sort($new);
         return $new;
     }
+    print_r(ft_split("Bonjour ca va ?"));
 ?>
