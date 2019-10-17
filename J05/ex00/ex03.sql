@@ -1,0 +1,1 @@
+SELECT * SUBSTRING(user_card, 1,4) FROM user_card WHERE last_name LIKE "%a%"
