@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Balloon</title>
+        <style>
+            #balloon {
+                border-radius: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            window.addEventListener("load", function() {
+                var color = Array('red', 'green', 'blue');
+                var ballon = document.getElementById('balloon');
+                var i = 0;
+                ballon.addEventListener("click", function(e) {
+                    if (i >= 2)
+                    {
+                        ballon.style.background = color[0];
+                        i = 0;
+                    }
+                    else
+                    {
+                        ballon.style.background = color[++i];
+                    }
+                    ballon.style.width = ballon.offsetWidth+10+'px';
+                    ballon.style.height = ballon.offsetHeight+10+'px';
+                    if (ballon.offsetHeight > 420)
+                    {
+                        ballon.style.width = "200px";
+                        ballon.style.height = "200px";
+                    }
+                });
+                ballon.addEventListener("mouseleave", function(e) {
+                    
+                    if (i <= 0) {
+                        ballon.style.background = color[2];
+                        i = 2;
+                    }
+                    else
+                    {
+                        ballon.style.background = color[--i];
+                    }
+                    ballon.style.width = ballon.offsetWidth-5+'px';
+                    ballon.style.height = ballon.offsetHeight-5+'px';
+                    if (ballon.offsetHeight < 200)
+                    {
+                        ballon.style.width = "200px";
+                        ballon.style.height = "200px";
+                    }
+                });
+            });
+        </script>
+        <div id="balloon" style="background: red; width:200px; height:200px"></div>
+    </body>
+</html>

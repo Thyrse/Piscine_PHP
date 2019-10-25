@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Balloon JQuery</title>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <style>
+            #balloon {
+                border-radius: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            $(document).ready(function() {
+                var color = Array('red', 'green', 'blue'),
+                    i = 0;
+                $('#balloon').click(function(e) {
+                    if (i >= 2)
+                    {
+                        $(this).css("background-color", color[0]);
+                        i = 0;
+                    }
+                    else
+                    {
+                        $(this).css("background-color", color[++i]);
+                    }
+                    $(this).css("width", "+=10");
+                    $(this).css("height", "+=10");
+                    if ($(this).width() > 420 || $(this).height() > 420)
+                    {
+                        console.log("Salut les michtos");
+                        $(this).css("width", "200px");
+                        $(this).css("height", "200px");
+                    }
+                });
+                $('#balloon').mouseleave(function(e) {
+                    if (i <= 0) {
+                        $(this).css("background-color", color[2]);
+                        i = 2;
+                    }
+                    else
+                    {
+                        $(this).css("background-color", color[--i]);
+                    }
+                    $(this).css("width", "-=5");
+                    $(this).css("height", "-=5");
+                    if ($(this).width() < 200 || $(this).height() < 200)
+                    {
+                        $(this).css("width", "200px");
+                        $(this).css("height", "200px");
+                    }
+                });
+            });
+        </script>
+        <div id="balloon" style="background: red; width:200px; height:200px"></div>
+    </body>
+</html>

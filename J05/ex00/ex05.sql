@@ -1,1 +1,0 @@
-DELETE FROM `ft_table` WHERE id BETWEEN 1 AND 5;

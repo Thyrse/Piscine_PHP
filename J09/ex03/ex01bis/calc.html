@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Calculatrice JQuery</title>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <script>
+            $(document).ready(function() {
+                $('#calcul').click(function(e) {
+                    var option = $('#which').val(),
+                        linput = $('#leftext').val(),
+                        rinput = $('#rightext').val();
+                    console.log(rinput);
+                    if (!isNaN(linput) && !isNaN(rinput) && rinput >= 0 && linput >= 0 && linput && rinput)
+                    {
+                        if ((option == '%' || option == '/') && rinput == 0)
+                        {
+                            console.log("Its over 9000!");
+                            alert("Its over 9000!");
+                        }
+                        else
+                        {
+                            console.log(eval(parseInt(linput) + option + parseInt(rinput)));
+                            alert(eval(parseInt(linput) + option + parseInt(rinput)));
+                        }
+                    }
+                    else
+                    {
+                        alert("Error :(");
+                    }
+                });
+                setInterval(function(){alert("Please, use me...")}, 30000);
+            });
+        </script>
+            <input type="text" id="leftext">
+            <select id="which">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+            <input type="text" id="rightext">
+            <input type="submit" id="calcul" value="Try me!">
+    </body>
+</html>

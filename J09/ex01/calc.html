@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Calculatrice</title>
+    </head>
+    <body>
+        <script>
+            window.addEventListener("load", function() {
+                var calc = document.getElementById('calcul');
+                var select = document.getElementById('which');
+                calc.addEventListener("click", function(e) {
+                    var option = select.value;
+                    var linput = document.getElementById('leftext').value;
+                    var rinput = document.getElementById('rightext').value;
+                    console.log(rinput);
+                    if (!isNaN(linput) && !isNaN(rinput) && rinput >= 0 && linput >= 0 && linput && rinput)
+                    {
+                        if ((option == '%' || option == '/') && rinput == 0)
+                        {
+                            console.log("Its over 9000!");
+                            alert("Its over 9000!");
+                        }
+                        else
+                        {
+                            console.log(eval(parseInt(linput) + option + parseInt(rinput)));
+                            alert(eval(parseInt(linput) + option + parseInt(rinput)));
+                        }
+                    }
+                    else
+                    {
+                        alert("Error :(");
+                    }
+                });
+                setInterval(function(){alert("Please, use me...")}, 30000);
+            });
+        </script>
+            <input type="text" id="leftext">
+            <select id="which">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+            <input type="text" id="rightext">
+            <input type="submit" id="calcul" value="Try me!">
+    </body>
+</html>
