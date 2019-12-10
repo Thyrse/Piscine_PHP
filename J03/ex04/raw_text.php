@@ -5,8 +5,7 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>print_get</title>
-  <meta name="ROBOTS" content="NOINDEX,NOFOLLOW,NOARCHIVE">
+  <title>raw_text</title>
 </head>
 <body>
 <h1>Hello World!</h1>

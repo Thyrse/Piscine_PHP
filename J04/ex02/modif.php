@@ -5,20 +5,19 @@ if ($_POST["login"] === "" || $_POST["oldpw"] === "" || $_POST["newpw"] === "" |
     return ;
 }
 $status = false;
-if (file_exists("private/passwd"))
+if (file_exists("../private/passwd"))
 {
-    $serialized = unserialize(file_get_contents("private/passwd"));
+    $serialized = unserialize(file_get_contents("../private/passwd"));
     foreach ($serialized as $key => $value)
     {
-        if ($value["login"] === $_POST["login"] && $value["passwd"] === hash('md5', $_POST["oldpw"]))
+        if ($value["login"] === $_POST["login"] && $value["passwd"] === hash('whirlpool', $_POST["oldpw"]))
         {
-            $serialized[$key]["passwd"] = hash('md5', $_POST["newpw"]);
+            $serialized[$key]["passwd"] = hash('whirlpool', $_POST["newpw"]);
             $status = true;
         }
     }
 }
-$serialized = file_put_contents("private/passwd", serialize($serialized));
-var_dump($serialized);
+$serialized = file_put_contents("../private/passwd", serialize($serialized));
 if ($status == false)
 {
     echo "ERROR\n";
@@ -27,10 +26,4 @@ else
 {
     echo "OK\n";
 }
-// if ($_POST['login'] != '' && $_POST['passwd'] != '')
-// {
-//     echo "OK\n";
-//     $serialized[] = array("login" => $_POST['login'], "passwd" => hash('md5', $_POST['passwd']));
-//     file_put_contents("private/passwd", serialize($serialized));
-// }
 ?>

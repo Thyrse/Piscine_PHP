@@ -5,13 +5,13 @@ function ft_is_sort($tab)
     $array = $tab;
     $params = count($array);
     sort($array);
-    $state = 1;
+    $state = TRUE;
 
     while ($i < $params)
     {
         if ($array[$i] != $tab[$i])
         {
-            $state = 0;
+            $state = FALSE;
         }
         $i++;
     }

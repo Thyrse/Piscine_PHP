@@ -11,13 +11,12 @@ while (!feof($file))
         $content = unpack("a256login/a4id/a32gid/iuid/istatus/ilogtime", $content);
         if ($content['status'] == 7)
         {
-            echo trim($content['login']);
-            echo " ";
-            echo trim($content['gid']);
-            echo "  ";
-            echo $time = date("M d H:i", $content['logtime']);
-            echo " \n";
+            $session[] = trim($content['login']) . " " . trim($content['gid']) . "  " . $time = date("M d H:i", $content['logtime']);
         }
     }
+}
+sort($session);
+foreach ($session as $field) {
+    echo $field." \n";
 }
 ?>

@@ -12,13 +12,12 @@
                     var option = select.value;
                     var linput = document.getElementById('leftext').value;
                     var rinput = document.getElementById('rightext').value;
-                    console.log(rinput);
                     if (!isNaN(linput) && !isNaN(rinput) && rinput >= 0 && linput >= 0 && linput && rinput)
                     {
                         if ((option == '%' || option == '/') && rinput == 0)
                         {
-                            console.log("Its over 9000!");
-                            alert("Its over 9000!");
+                            console.log("It's over 9000!");
+                            alert("It's over 9000!");
                         }
                         else
                         {

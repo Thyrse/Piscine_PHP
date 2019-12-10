@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Balloon JQuery</title>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <style>
             #balloon {
                 border-radius: 100%;
@@ -28,7 +28,6 @@
                     $(this).css("height", "+=10");
                     if ($(this).width() > 420 || $(this).height() > 420)
                     {
-                        console.log("Salut les michtos");
                         $(this).css("width", "200px");
                         $(this).css("height", "200px");
                     }

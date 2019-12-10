@@ -2,7 +2,6 @@ window.addEventListener("load", function() {
     var list = document.getElementById('ft_list');
 	var button = document.getElementById('button');
 	var task;
-
 	function checkCookie()
 	{
 		list.innerHTML = decodeURIComponent(getCookie('list'));
@@ -31,7 +30,7 @@ window.addEventListener("load", function() {
 	}
     button.addEventListener("click", function(e) {
         var newdiv = prompt("Inserer une nouvelle ToDo");
-        if (newdiv.length !== 0 && newdiv.trim())
+        if (newdiv && newdiv.length !== 0 && newdiv.trim())
         {
 			task = document.createElement("div");
 			task.setAttribute("class", "todo");

@@ -1,0 +1,490 @@
+html, body {
+    height: 100%;
+    margin: 0; padding: 0;
+}
+body {
+    display : table;
+    width: 100%;
+    background: url('assets/images/background.jpg');
+    font-family: "Open Sans",Arial,Sans-Serif;
+}
+h3 {
+    margin: 0;
+}
+#delete_confirm {
+    text-align: center;
+    color:#ff0000;
+}
+/* FONTS */
+
+@font-face{ 
+    font-family: 'Open Sans';
+    src: url('fonts/OpenSans-Regular.ttf');
+}
+@font-face{ 
+    font-family: 'Raleway';
+    src: url('fonts/Raleway-Regular.ttf');
+}
+h1, h2, h3, h4 {
+    font-family: "Raleway";
+}
+h3 {
+    font-size: 1.4em;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    box-shadow: 0px -9px 10px 3px black;
+}
+.header_basket, .header_sign  {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.header_logo img {
+    width: 110px;
+}
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+.preview_basket::after {
+    content: url("assets/images/shopping-cart.svg");
+    width: 25px;
+    margin-right: 10px;
+}
+.preview_basket {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 5px;
+    font-size: 13px;
+    border-radius: 5px;
+}
+.preview_basket:hover {
+    cursor: pointer;
+}
+
+/* MAIN CONTENT */
+
+#main {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    justify-content: center;
+}
+.category-block {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    border: 1px solid #dcdcdc;
+    margin-right: 20px;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+.category_title {
+    text-align: center;
+    margin: 20px 0;
+}
+.category-list {
+    padding-left: 30px;
+    margin-left: 20px;
+}
+.category-list ul li {
+    font-size: 15px;
+    margin: 12px 0;
+}
+.category-list ul {
+    padding: 0;
+    margin: 0;
+}
+.items-block {
+    display: flex;
+    flex-direction: column;
+}
+.items-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.items-list .item {
+    width: 310px;
+    height: 270px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 0px 15px -12px #000000;
+    border-radius: 5px;
+    margin: 3px;
+    background-color: #ffffff;
+}
+.items-list .item img {
+    max-width: 230px;
+    max-height: 200px;
+}
+.items-list .item .item_image {
+    width: 230px;
+    height: 200px;
+    margin: auto;
+}
+.items-list .item .item_name {
+    font-size: 16px;
+    margin: 10px 0;
+}
+.items-list .item_desc {
+    display: flex;
+    justify-content: left;
+}
+.items-list .item_desc span {
+    margin-right: 5px;
+    font-size: 11px;
+}
+.items-list .item_price {
+    font-size: 15px;
+    text-align: right;
+    margin: 0;
+}
+
+/* FOOTER */
+
+footer {
+    display: table-row;
+    bottom: 0;
+    height: 70px;
+    right: 0;
+    left: 0;
+    background-color: #cecece;
+}
+#footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e6dddd;
+    padding-top: 5px;
+}
+.footer_logo img {
+    width: 110px;
+}
+.footer_logo {
+    margin: auto;
+}
+
+/* PRODUCT */
+
+.product_infos {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 30px 0;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0px #000000;
+    background-color: #ffffff;
+}
+.product_back {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    box-shadow: 0px 0px 3px 0px #000000;
+    padding: 0 20px;
+    background-color: #ffffff;
+}
+.product_back .product_arrow {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.product_back .product_arrow img {
+    width: 50px;
+    height: 40px;
+}
+.product_back p {
+    margin: 0;
+}
+.product_title {
+    margin: auto;
+    padding: 0 20px;
+}
+.product_infos .product_img {
+    border-bottom: 1px solid #dcdcdc;
+    height: 400px;
+    width: 400px;
+}
+.product_infos .product_img img {
+    min-width: 250px;
+    max-height: 400px;
+    max-width: 400px;
+}
+.product_infos .product_carac {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-right: 50px;
+}
+.product_infos .product_carac .product_desc {
+    margin-top: 30px
+}
+.product_infos .product_buy {
+    width: 210px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 5px 0px #000000;
+    border-radius: 2px;
+    padding: 10px;
+}
+.product_infos .product_buy p {
+    margin: 5px;
+}
+.product_infos .product_buy form > input {
+    text-align: center;
+    padding: 2px;
+    border-radius: 50px;
+    box-shadow: none;
+    border: 2px solid #dcdcdc;
+}
+.product_infos .product_buy form {
+    margin-top : 30px;
+}
+.product_buy .product_add::after {
+    content: url("assets/images/add-to-cart.svg");
+    width: 20px;
+    margin-right: 5px;
+}
+.product_buy .product_add {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 3px;
+    font-size: 11px;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.product_buy .buying_name {
+    font-size: 20px;
+    text-align: center;
+}
+
+.product_buy .buying_price, .product_buy .buying_qte  {
+    font-size: 15px;
+    text-align: center;
+}
+
+/* BASKET */
+
+.basket {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 15px -12px #000000;
+    min-width: 300px;
+    background-color: #ffffff;
+}
+.basket h2 {
+    text-align: center;
+}
+.basket .basket_item {
+    display: flex;
+    text-align: center;
+    padding: 10px;
+    margin: 7px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #dcdcdc;
+}
+.basket .basket_item img {
+    max-width: 230px;
+    max-height: 200px;
+}
+.basket .basket_desc {
+    margin: 20px;
+}
+.basket .basket_item .item_price {
+    font-size: 14px;
+}
+.basket .basket_item .item_price, .basket .basket_item .item_name {
+    margin: 3px 0;
+}
+.basket .basket_item .basket_desc span {
+    font-size: 11px;
+}
+.basket .basket_image {
+    width: 230px;
+    height: 200px;
+}
+.basket .item_desc {
+    display: flex;
+    justify-content: left;
+}
+.basket .item_desc span {
+    margin-right: 5px;
+}
+.basket .basket_qte input {
+    width: 20px;
+    text-align: center;
+}
+.basket .basket_buy {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 7px;
+}
+
+/* FORMS */
+
+.create {
+    box-shadow: 0px 0px 15px -12px #000000;
+    border-radius: 5px;
+    padding: 20px;
+}
+.create h3 {
+    text-align: center;
+}
+.create form {
+    display: flex;
+    flex-wrap: wrap;
+}
+.create .create_form {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #dcdcdc;
+    padding: 20px 20px 20px 0;
+    margin: 10px 40px 10px 0;
+}
+.create .create_form input, .create .create_form textarea {
+    margin-bottom: 20px;
+    padding: 5px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+}
+.create .create_form textarea {
+    min-width: 340px;
+    min-height: 130px;
+    max-width: 600px;
+    max-height: 300px;
+}
+.create .create_form input[name="image"], .create .create_form input[type="file"] {
+    border: none;
+}
+.create .create_button {
+    margin: auto;
+}
+.create .create_button button {
+    padding: 30px 10px;
+    box-shadow:inset 0px 1px 0px 0px #caefab;
+    background:linear-gradient(to bottom, #77d42a 5%, #5cb811 100%);
+    background-color:#77d42a;
+    border-radius:6px;
+    border:1px solid #268a16;
+    display:inline-block;
+    cursor:pointer;
+    font-weight:bold;
+    text-decoration:none;
+}
+.create .create_button button:hover {
+    background:linear-gradient(to bottom, #5cb811 5%, #77d42a 100%);
+    background-color:#5cb811;
+}
+.create .create_button button:active {
+    position:relative;
+    top:1px;
+}
+
+.create.create_user form {
+    flex-direction: column;
+}
+.create .user_registration {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 20px;
+    margin: 20px;
+}
+.create .user_registration input {
+    margin-bottom: 20px;
+    padding: 5px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+}
+.create .user_registration input[name="image"], .create .user_registration input[type="file"] {
+    border: none;
+}
+
+/* TOGGLE */
+
+.toggle {
+    display: none;
+    width: 210px;
+    height: auto;
+    padding: 20px;
+    border: 2px solid #dcdcdc;
+    border-radius: 10px;
+    top: 70px;
+    position: absolute;
+    background: #ffffff;
+}
+.toggle h3 {
+    text-align: center;
+}
+.toggle form, .toggle .login_fields {
+    display: flex;
+    flex-direction: column;
+}
+.toggle .login_fields input {
+    margin-bottom: 15px;
+    padding: 5px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+}
+.toggle .toggle_button {
+    text-align: center;
+}
+.toggle.toggle_login {
+    right: 5px;
+}
+.toggle.toggle_basket {
+    width: 270px;
+    flex-direction: column;
+    left: 5px;
+    max-height: 600px;
+    overflow-y: scroll;
+}
+.toggle .basket_preview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+}
+.toggle .basket_miniature img {
+    width: 60px;
+    max-height: 60px;
+}
+.toggle .toggle_basket_desc p {
+    margin: 0;
+}
+.toggle .basket_preview:not(:last-child) {
+    border-bottom: 1px solid #dcdcdcdc;
+}
+.toggle.toggle_user {
+    flex-direction: column;
+    padding: 5px;
+    width: 250px;
+    right: 5px;
+}
+.toggle.toggle_user h3 {
+    margin: 10px 0;
+}
+.toggle.toggle_user .user_actions div {
+    font-size: 16px;
+    border-top: 1px solid #dcdcdc;
+    padding: 7px 10px;
+    text-align: center;
+}

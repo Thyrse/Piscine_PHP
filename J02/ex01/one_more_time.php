@@ -7,7 +7,7 @@ function regex_day($day)
 }
 function regex_month($month)
 {
-    $month = preg_match("/(^[J|j]anvier|^[F|f][é|e]vrier|^[M|m]ars|^[A|a]vril|^[M|m]ai|^[J|j]uin|^[J|j]uillet|^[A|a]o[û|u]t|^[S|s]eptembre|^[O|o]ctobre|^[N|n]ovembre|^[D|d][é|e]cembre)$/", $month);
+    $month = preg_match("/(^[J|j]anvier|^[F|f]evrier|^[F|f]évrier|^[M|m]ars|^[A|a]vril|^[M|m]ai|^[J|j]uin|^[J|j]uillet|^[A|a]out|^[A|a]oût|^[S|s]eptembre|^[O|o]ctobre|^[N|n]ovembre|^[D|d]ecembre|^[D|d]écembre)$/", $month);
     return $month;
 }
 function nb_month($month)

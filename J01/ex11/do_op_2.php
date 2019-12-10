@@ -33,7 +33,7 @@ foreach ($array as $y)
 {
     array_push($new, trim($y));
 }
-if (is_numeric($new[0]) && is_numeric($new[1]) && count($new) == 2)
+if (is_numeric($new[0]) && is_numeric($new[1]) && count($new) == 2 && !($new[1] == 0 && ($operator == "/" || $operator == "%")))
 {
     switch ($operator)
     {

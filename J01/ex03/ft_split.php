@@ -6,5 +6,4 @@
         sort($new);
         return $new;
     }
-    print_r(ft_split("Bonjour ca va ?"));
 ?>

@@ -10,7 +10,7 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>print_get</title>
+  <title>session</title>
   <meta name="ROBOTS" content="NOINDEX,NOFOLLOW,NOARCHIVE">
 </head>
 <body>
